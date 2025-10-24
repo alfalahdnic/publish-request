@@ -455,6 +455,15 @@
             margin-top: 0.5rem;
             display: none;
         }
+
+        .wlw {
+            text-decoration: #6a75ee;
+            color: #6a75ee;
+        }
+
+       .form-content textarea {
+        height: 16rem;
+       }
     </style>
 </head>
 <body>
@@ -463,8 +472,8 @@
     <div class="floating-bg"></div>
     
     <header>
-        <h1>Submit Your Literature</h1>
-        <p class="subtitle">Share your creative works with our class community</p>
+        <h1>Submit Your Literature on <strong style="color: #6a75ee;"> Al Falah</strong></h1>
+        <p class="subtitle">Share your creative works  <span class="wlw">WorldWide</span></p>
     </header>
 
     <div class="container">
@@ -472,20 +481,20 @@
             <div class="form-content">
                 <div class="form-header">
                     <h2 class="form-title">Publication Request</h2>
-                    <p class="form-subtitle">Fill out the form below to submit your poem or essay for review</p>
+                    <p class="form-subtitle">Fill out the form below to submit your poem or essay to Al Falah Literature</p>
                 </div>
 
                 <form id="submissionForm" action="https://formsubmit.co/maizengg14@gmail.com" method="POST">
                     <!-- Hidden FormSubmit Configuration -->
-                    <input type="hidden" name="_subject" value="New Literature Submission - Class Portal">
+                    <input type="hidden" name="_subject" value="New Literature Submission - Al Falah Publications">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_autoresponse" value="Thank you for your literature submission! We've received your work and will review it shortly.">
                     <input type="hidden" name="_next" value="https://alfalahdnic.github.io/thanks-for-publishing">
 
                     <div class="form-group">
-                        <label class="form-label">Type of Work *</label>
-                        <div class="form-radio-group" id="workTypeGroup">
+                        <label class="form-label">Type of Literature *</label>
+                        <div class="form-radio-group" id="workTypeGroup"> 
                             <label class="form-radio">
                                 <input type="radio" name="work_type" value="poem">
                                 <span class="radio-custom"></span>
@@ -496,25 +505,34 @@
                                 <span class="radio-custom"></span>
                                 <span>Essay</span>
                             </label>
+                        
+                       <label class="form-radio">
+                                <input type="radio" name="work_type" value="Other">
+                                <span class="radio-custom"></span>
+                                <span>Other</span>
+                            </label>
+                            
                         </div>
                         <div class="work-type-error" id="workTypeError">Please select a work type</div>
                     </div>
 
                     <div class="form-group">
                         <label for="title" class="form-label">Title / Topic *</label>
-                        <input type="text" id="title" name="title" class="form-input" placeholder="Enter the title of your work">
-                        <div class="error-message" id="titleError">Please enter a title for your work</div>
+                        <input type="text" id="title" name="title" class="form-input" placeholder="Enter the title of your Literature" required>
+                        <div class="error-message" id="titleError">Please enter a title for your Literature</div>
                     </div>
 
                     <div class="form-group">
                         <label for="author" class="form-label">Author Name *</label>
-                        <input type="text" id="author" name="author" class="form-input" placeholder="Your full name">
+                        <input type="text" id="author" name="author" class="form-input" placeholder="Your full name" required >
                         <div class="error-message" id="authorError">Please enter your name</div>
                     </div>
 
+                    <div class="ext">
                     <div class="form-group">
                         <label for="content" class="form-label">Content *</label>
-                        <textarea id="content" name="content" class="form-textarea" placeholder="Write your poem or essay here..."></textarea>
+                        <textarea id="content" name="content" class="form-textarea" placeholder="Write your poem or essay here..." required></textarea>
+                      </div>
                         <div class="char-counter"><span id="charCount">0</span> characters</div>
                         <div class="error-message" id="contentError">Please enter the content of your work</div>
                     </div>
@@ -539,7 +557,8 @@
     </div>
 
     <footer>
-        <p>© 2025 Al Falah | All rights reserved</p>
+        <p>Al Falah Publications</p>
+        <p>© Copyright Owned By Sibhathulla mkd</p>
     </footer>
 
     <script>
@@ -612,6 +631,8 @@
                 });
             });
         });
+
+        
     </script>
 </body>
 </html>
